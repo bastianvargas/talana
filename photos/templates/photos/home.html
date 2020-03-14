@@ -1,0 +1,24 @@
+{% extends 'photos/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<h2>Galeria</h2>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+  </tr>
+
+  {% for p in photos %}
+  <tr>
+    <td>{{ p.nick_name }}</td>
+    {% if p.photo %}
+    <img src="{{ p.photo.url }}" alt="">
+    {% endif %}
+
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}
