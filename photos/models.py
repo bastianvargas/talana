@@ -14,5 +14,5 @@ class Photo(models.Model):
             self.nick_name = self.nick_name.upper()
             super(Photo, self).save()
 
-        class Meta:
-            verbose_name_plural = "Photos"
+    class Meta:
+        verbose_name_plural = "Photos"
