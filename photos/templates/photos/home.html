@@ -12,9 +12,13 @@
 
   {% for p in photos %}
   <tr>
-    <td>{{ p.nick_name }}</td>
+
     {% if p.photo %}
-    <img src="{{ p.photo.url }}" alt="">
+    <div class="photos">
+        <p>{{ p.nick_name }}</p>
+        <img src="{{ p.photo.url }}" alt="">
+    </div>
+
     {% endif %}
 
   </tr>
